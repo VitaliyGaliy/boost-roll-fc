@@ -1,0 +1,33 @@
+# ESTIMATE / archive — do NOT load this whole file onto Matek.
+# Use matek_h743_fbwa_bringup.parm, then set orientation, servo sign, logs.
+# Thesis-style: roll from gyro/AHRS only. No pitot, no GPS.
+# ArduPlane only. Canard/aileron: SERVOx_FUNCTION = 4. FBWA. Motors off.
+RLL2SRV_TCONST,0.50
+RLL2SRV_RMAX,60
+RLL2SRV_P,0.350
+RLL2SRV_I,0.100
+RLL2SRV_D,0.020
+RLL2SRV_FF,0.150
+RLL2SRV_IMAX,1800
+RLL_RATE_P,0.350
+RLL_RATE_I,0.100
+RLL_RATE_D,0.020
+RLL_RATE_FF,0.150
+ARSPD_TYPE,0
+ARSPD_USE,0
+ARSPD_AUTOCAL,0
+GPS1_TYPE,0
+GPS2_TYPE,0
+AHRS_GPS_USE,0
+ARMING_NEED_LOC,0
+# 260 is a leftover ARMING_CHECK number. Do not use as ARMING_SKIPCHK on the board.
+ARMING_SKIPCHK,260
+EK3_SRC1_POSXY,0
+EK3_SRC1_VELXY,0
+EK3_SRC1_VELZ,0
+SCALING_SPEED,15
+AIRSPEED_MIN,15
+AIRSPEED_MAX,15
+LIM_ROLL_CD,4500
+KFF_RDDRMIX,0
+FLTMODE1,5

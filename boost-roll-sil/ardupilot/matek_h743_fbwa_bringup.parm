@@ -1,0 +1,32 @@
+# Matek H743-Wing + ArduPlane: bench bring-up only.
+# Firmware: Plane / MatekH743 (not Copter, not bdshot unless you need it).
+# Do NOT load plane_roll_boost.parm. Do NOT copy RLL2SRV_* / RLL_RATE_* from SIL.
+# Mission Planner: Full Parameter List -> Load this file, then set AHRS_ORIENTATION
+# and SERVOx by hand after the board and canards are mounted.
+
+# --- no pitot, no GPS, no compass (board has none) ---
+ARSPD_TYPE,0
+ARSPD_USE,0
+ARSPD_AUTOCAL,0
+GPS1_TYPE,0
+GPS2_TYPE,0
+AHRS_GPS_USE,0
+COMPASS_ENABLE,0
+ARMING_NEED_LOC,0
+AHRS_EKF_TYPE,0
+STALL_PREVENTION,0
+
+# Keep all remaining arming checks. 260 is a leftover ARMING_CHECK value — never use it as SKIPCHK.
+ARMING_SKIPCHK,0
+
+# FBWA only. No AUTO/RTL/LOITER without GPS.
+FLTMODE1,5
+FS_LONG_ACTN,2
+KFF_RDDRMIX,0
+
+# Default AETR: canard/aileron on SERVO1. Change the index if the lead is on another pad.
+SERVO1_FUNCTION,4
+
+# Bench log: attitude + CTUN + IMU + RC in/out. microSD required.
+LOG_DISARMED,1
+LOG_BITMASK,8337

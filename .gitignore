@@ -1,0 +1,11 @@
+# MATLAB / Simulink
+slprj/
+*.slxc
+*.autosave
+*.asv
+*.mex*
+*.sdf
+*.orig
+
+# OS
+.DS_Store
